@@ -19,26 +19,26 @@
   <body>
     <header class="header">
       <nav class="wrapper navigation">
-        <a href="index.html" class="navigation_logo">
+        <a href="index.html" class="navigation__logo">
           <img src="..\img\svg\logo.svg" alt="Logotype">
         </a>
         <ul class="navigation__ul">
-          <li class="navigation__li">
+          <li class="navigation__li nav">
             <a href="#decorazza" class="navigation__a"> DECORAZZA</a>
           </li>
-          <li class="navigation__li">
+          <li class="navigation__li nav">
             <a href="#catalog" class="navigation__a"> КАТАЛОГ</a>
           </li>
-          <li class="navigation__li">
+          <li class="navigation__li nav">
             <a href="#" class="navigation__a"> ОБУЧЕНИЕ</a>
           </li>
-          <li class="navigation__li">
-            <a href="#" class="navigation__a"> СОТРУДНИЧЕСТВО</a>
+          <li class="navigation__li nav">
+            <a href="#wall" class="navigation__a"> СОТРУДНИЧЕСТВО</a>
           </li>
-          <li class="navigation__li">
+          <li class="navigation__li nav">
             <a href="#contacts" class="navigation__a"> КОНТАКТЫ</a>
           </li>
-          <li class="navigation__b">
+          <li class="navigation__b nav">
             <a href="tel:+78452465880" class="navigation__b_a"> +7 (8452) 465-880</a>
             <p class="navigation__b_p">заказать звонок</p>
           </li>
@@ -51,10 +51,10 @@
     <main class="main">
       <section class="wrapper catalog ">
         <div class="catalog-paper">
-          <h1 class="catalog-paper__h"> Декоративные штукатурки и краски </h1>
+          <h1 class="catalog-paper__h"> Декоративные<br> штукатурки и краски </h1>
           <p class="catalog-paper__p"> Легко подобрать цвет, фактуру и сделать расчет материалов под ваш проект </p>
           <p class="catalog-paper__btn">
-            <a href="#" class="btn catalog-paper__btn_a"> Смотреть каталог </a>
+            <a href="#modal" class="btn catalog-paper__btn_a"> Смотреть каталог </a>
           </p>
         </div>
         <ul class="catalog-svg">
@@ -62,15 +62,21 @@
           <li class="catalog-svg__li catalog-svg__li_price"> ДОСТУПНЫЕ ЦЕНЫ </li>
           <li class="catalog-svg__li catalog-svg__li_exclusive"> ЭКСКЛЮЗИВНАЯ ПРОДУКЦИЯ </li>
         </ul>
-        <figure class="catalog-img">
+        <figure class="catalog-img ">
           <img src="./img/pictures1.jpg" alt="photo" class="catalog-img__1">
+          <img src="./img/pictures1-768px.jpg" alt="photo" class="catalog-img__1_ipad">
+          <img src="../img/picture1-1440px.png" alt="photo" class="catalog-img__1_dectop">
           <img src="./img/pictures2.jpg" alt="photo" class="catalog-img__2">
+          <img src="./img/pictures2-768px.jpg" alt="photo" class="catalog-img__2_ipad">
+          <img src="../img/pictures2-1440px.jpg" alt="photo" class="catalog-img__2_dectop">
           <img src="./img/pictures3.jpg" alt="photo" class="catalog-img__3">
+          <img src="./img/pictures3-768px.jpg" alt="photo" class="catalog-img__3_ipad">
           <img src="./img/pictures4.png" alt="photo" class="catalog-img__4">
+          <img src="./img/pictures4-768px.jpg" alt="photo" class="catalog-img__4_ipad">
         </figure>
       </section>
       <article id="decorazza" class="decorazza">
-        <div class="decorazza-form">
+        <div class="decorazza-form wrapper">
           <p class="decorazza-form__p"> Добро пожаловать в </p>
           <h2 class="decorazza-form__h"> Decorazza </h2>
           <p class="decorazza-form__p">Decorazza — это эксклюзивные декоративные штукатурки, фактурные и лессирующие материалы. </p>
@@ -103,7 +109,7 @@
         </div>
         <div class="background-image__last">
         </div>
-        <div class=" advantages-list_order wrapper">
+        <div class="advantages-list_order wrapper">
           <h2 class="decor-h"> А ещё... </h2>
           <ul class="catalog-ul">
             <li class="catalog-ul__li">
@@ -119,13 +125,14 @@
                 <b>Смена цвета:</b> если дизайн начинает надоедать, просто перекрасьте стены, декорированные штукатуркой, в другой цвет. </p>
             </li class="catalog-ul__li">
           </ul>
+        </div>
       </section>
       <section class="plaster">
         <div class="plaster-advanteges wrapper">
           <h2 class="plaster-advanteges__h"> Преимущества декоративной штукатурки </h2>
           <p class="plaster-advanteges__p"> Что выбрать, декоративную штукатурку или обои? </p>
         </div>
-        <div class="wall">
+        <div id="wall" class="wall">
           <div class="wall-plaster">
             <p class="wall-plaster__p"> Штукатурка </p>
             <ul class="wall-plaster__ul">
@@ -164,6 +171,7 @@
         <div class="contacts-map">
           <a href="https://www.google.com.ua/maps/@49.2066941,28.4954985,15z" class="contacts-map__link" rel="nofollow noopener" target="_blank">
             <img src="./img/map.jpg" alt="map" class="contacts-map__img">
+            <img src="./img/map.jpg" alt="map" class="contacts-map__img1440px">
           </a>
           <div id="map" class="contacts-map__container"></div>
         </div>
@@ -172,6 +180,23 @@
     <footer class="footer wrapper">
       <p class="footer-decorazza"> © 2016 Салон "Decorazza" в Саратове </p>
     </footer>
+    <div class="modal-container d-n">
+      <div class="modal-container__main wrapper">
+        <button class="closer-modal">
+          <span class="visually-hidden">Closer</span>
+        </button>
+        <section id="modal" class="consultation">
+          <h2 class="consultation__h"> Закажите бесплатную консультация </h2>
+          <p class="consultation__p"> Оставьте Ваши контакты и мы свяжемся с Вами в ближайшее время </p>
+          <form action="#" class="consultation-free">
+            <input type="text" class="consultation-free__input" placeholder="Имя">
+            <input type="text" class="consultation-free__input" placeholder="Телефон">
+            <input type="text" class="consultation-free__input" placeholder="Ваш запрос">
+            <button class="consultation-free__button " type="submit"> Отправить </button>
+          </form>
+        </section>
+      </div>
+    </div>
     <script src="./js/jquery.min.js"></script>
     <script src="./js/js.js"></script>
   </body>
