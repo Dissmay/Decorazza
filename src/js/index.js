@@ -46,22 +46,14 @@ $(function(){
 	});
 
 
-	$(window).on('scroll', function(e){
-		var target = $(e.target);
-		var scrollTop = target.scrollTop();
-		var navigation = $('.navigation');
-		if(scrollTop > 400){
-			navigation.addClass('fixmenu');
-		} else{
-			navigation.removeClass('fixmenu');
-		}
-	});
+	
 
 	/* EasyScroll */
 
 	var linkEasy = $('.navigation__a');
 
 	linkEasy.on('click', function(e){
+		e.preventDefault();
 		var target = $(e.target);
 		var link = target.attr('href');
 
@@ -69,7 +61,34 @@ $(function(){
 		$('html,body').animate({
 			scrollTop: elemToScroll.offset().top -400
 		}, 500);
-	})
+	});
+
+
+	/* кнопка возврата на верх страницы. сделал ее появление*/
+	$(window).on('scroll', function(e){
+		var target = $(e.target);
+		var scrollTop = target.scrollTop();
+		var menuUp = $('.menuUp');
+		if(scrollTop > 400){
+			menuUp.addClass('activeMenu');
+		}else{
+			menuUp.removeClass('activeMenu');
+		}
+	});
+
+	/* EasyScroll для кнопки возврата на верх страницы*/
+
+	var menuUp = $('.menuUp');
+	menuUp.on('click', function(e){
+		e.preventDefault();
+		var target = $(e.target);
+		var link = target.attr('href');
+
+		var menu = $(link);
+		$('html, body').animate({
+			scrollTop: menu.offset().top -50
+		}, 500);
+	});
 
 
 });
